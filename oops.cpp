@@ -1,29 +1,29 @@
-// #include <iostream>
-// using namespace std;
-// class car{
-//     public:
-//          car(){
-//             age = 5;
-//          }
-//             string name;
-//             int age;
-//             int sal;
+#include <iostream>
+using namespace std;
+class car{
+    public:
+         car(){
+            age = 5;
+         }
+            string name;
+            int age;
+            int sal;
 
-//     void show(){
-//         cout << "car name " << name << endl;
-//         cout << "car aga " << age << endl;
-//         cout << "salary " << sal << endl;
-//     }
-//     };
-//     int main(){
-//         car c1;
-//         cin >> c1.name;
-//         // c1.age = 4;
-//         c1.sal = 2000000;
-//         c1.show();
-//         return 0;
+    void show(){
+        cout << "car name " << name << endl;
+        cout << "car aga " << age << endl;
+        cout << "salary " << sal << endl;
+    }
+    };
+    int main(){
+        car c1;
+        cin >> c1.name;
+        // c1.age = 4;
+        c1.sal = 2000000;
+        c1.show();
+        return 0;
 
-//     }
+    }
 
 //     //constructor
 

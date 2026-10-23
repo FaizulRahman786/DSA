@@ -1,115 +1,115 @@
-// #include <iostream>
+#include <iostream>
 
-// struct Node {
-//     int data;
-//     Node* next;
+struct Node {
+    int data;
+    Node* next;
     
-//     Node(int val) {
-//         data = val;
-//         next = nullptr;
-//     }
-// };
+    Node(int val) {
+        data = val;
+        next = nullptr;
+    }
+};
 
-// int main() {
-//     // Step 1: Create 3 individual nodes
-//     Node* node1 = new Node(10);
-//     Node* node2 = new Node(20);
-//     Node* node3 = new Node(30);
+int main() {
+    // Step 1: Create 3 individual nodes
+    Node* node1 = new Node(10);
+    Node* node2 = new Node(20);
+    Node* node3 = new Node(30);
 
-//     // Step 2: Link the nodes together
-//     node1->next = node2;
-//     node2->next = node3;
+    // Step 2: Link the nodes together
+    node1->next = node2;
+    node2->next = node3;
 
-//     // Step 3: Establish the head
-//     Node* head = node1;
-//     printf("created");
+    // Step 3: Establish the head
+    Node* head = node1;
+    printf("created");
 
-//     return 0;
-// }
-
-
+    return 0;
+}
 
 
 
-// #include <iostream>
 
-// // Define the structural blueprint for a single node
-// struct Node {
-//     int data;
-//     Node* next;
+
+#include <iostream>
+
+// Define the structural blueprint for a single node
+struct Node {
+    int data;
+    Node* next;
     
-//     // Constructor to easily initialize node data
-//     Node(int val) : data(val), next(nullptr) {}
-// };
+    // Constructor to easily initialize node data
+    Node(int val) : data(val), next(nullptr) {}
+};
 
-// int main() {
-//     Node* head = nullptr;
-//     Node* tail = nullptr;
+int main() {
+    Node* head = nullptr;
+    Node* tail = nullptr;
 
-//     // Use a for loop to create and populate 5 nodes
-//     for (int i = 1; i <= 5; i++) {
-//         // 1. Allocate a new node in memory
-//         Node* newNode = new Node(i);
+    // Use a for loop to create and populate 5 nodes
+    for (int i = 1; i <= 5; i++) {
+        // 1. Allocate a new node in memory
+        Node* newNode = new Node(i);
 
-//         // 2. If the list is empty, make this node the head
-//         if (head == nullptr) {
-//             head = newNode;
-//             tail = newNode;
-//         } 
-//         // 3. Otherwise, link the current tail to the new node
-//         else {
-//             tail->next = newNode; // Connect the old node to the new node
-//             tail = newNode;       // Move the tail pointer to the end
-//         }
-//     }
+        // 2. If the list is empty, make this node the head
+        if (head == nullptr) {
+            head = newNode;
+            tail = newNode;
+        } 
+        // 3. Otherwise, link the current tail to the new node
+        else {
+            tail->next = newNode; // Connect the old node to the new node
+            tail = newNode;       // Move the tail pointer to the end
+        }
+    }
 
-//     // Traverse and print the created linked list using a for loop
-//     std::cout << "Linked List: ";
-//     for (Node* temp = head; temp != nullptr; temp = temp->next) {
-//         std::cout << temp->data << " -> ";
-//     }
-//     std::cout << "NULL\n";
+    // Traverse and print the created linked list using a for loop
+    std::cout << "Linked List: ";
+    for (Node* temp = head; temp != nullptr; temp = temp->next) {
+        std::cout << temp->data << " -> ";
+    }
+    std::cout << "NULL\n";
 
-//     // Clean up memory to avoid memory leaks
-//     Node* current = head;
-//     while (current != nullptr) {
-//         Node* nextNode = current->next;
-//         delete current;
-//         current = nextNode;
-//     }
+    // Clean up memory to avoid memory leaks
+    Node* current = head;
+    while (current != nullptr) {
+        Node* nextNode = current->next;
+        delete current;
+        current = nextNode;
+    }
 
-//     return 0;
-// }
+    return 0;
+}
 
 
 
-// #include <iostream>
+#include <iostream>
 
-// // Linear search function for unsorted arrays
-// int linearSearch(int arr[], int size, int target) {
-//     for (int i = 0; i < size; i++) {
-//         if (arr[i] == target) {
-//             return i; // Target found, return its index
-//         }
-//     }
-//     return -1; // Target not found
-// }
+// Linear search function for unsorted arrays
+int linearSearch(int arr[], int size, int target) {
+    for (int i = 0; i < size; i++) {
+        if (arr[i] == target) {
+            return i; // Target found, return its index
+        }
+    }
+    return -1; // Target not found
+}
 
-// int main() {
-//     int unsortedArray[] = {42, 7, 19, 90, 3, 55};
-//     int size = sizeof(unsortedArray) / sizeof(unsortedArray[0]);
-//     int target = 90;
+int main() {
+    int unsortedArray[] = {42, 7, 19, 90, 3, 55};
+    int size = sizeof(unsortedArray) / sizeof(unsortedArray[0]);
+    int target = 90;
 
-//     int result = linearSearch(unsortedArray, size, target);
+    int result = linearSearch(unsortedArray, size, target);
 
-//     if (result != -1) {
-//         std::cout << "Element found at index: " << result << std::endl;
-//     } else {
-//         std::cout << "Element not found in the array." << std::endl;
-//     }
+    if (result != -1) {
+        std::cout << "Element found at index: " << result << std::endl;
+    } else {
+        std::cout << "Element not found in the array." << std::endl;
+    }
 
-//     return 0;
-// }
+    return 0;
+}
 
 #include <iostream>
 
