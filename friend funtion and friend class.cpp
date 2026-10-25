@@ -1,5 +1,6 @@
 // friend function 
 
+
 class func{
 
     void show(){
