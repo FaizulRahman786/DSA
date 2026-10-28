@@ -254,7 +254,7 @@ public:
     // Save object data as text
     bool save() const
     {
-        ofstream file("student.txt");
+        ofstream file("studnt.txt");
 
         if (!file)
             return false;
