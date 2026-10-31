@@ -127,6 +127,95 @@
 
 
 
+// #include <iostream>
+// using namespace std;
+
+// class Number {
+//     int value;
+
+// public:
+//     Number(int v) {
+//         value = v;
+//     }
+
+//     friend Number operator+(Number n);
+
+//     void display() {
+//         cout << "Value: " << value << endl;
+//     }
+// };
+
+// Number operator+(Number n) {
+
+//     return Number(+n.value);
+// }
+
+// int main() {
+
+//     Number a(25);
+
+//     Number result = +a;
+
+//     result.display();
+
+//     return 0;
+// }
+
+
+
+// #include <iostream>
+// using namespace std;
+
+// class Student {
+//     int age;
+
+// public:
+
+//     Student(int a) {
+//         age = a;
+//     }
+
+//     void show() {
+
+//         cout << "Current object address: " << this << endl;
+
+//         cout << "Age: " << this->age << endl;
+//     }
+// };
+
+// int main() {
+
+//     Student s1(18);
+//     Student s2(20);
+
+//     cout << "S1 address: " << &s1 << endl;
+//     s1.show();
+
+//     cout << "\nS2 address: " << &s2 << endl;
+//     s2.show();
+
+//     return 0;
+// }
+
+
+// class Student {
+// private:
+//     int age = 20;
+
+// public:
+//     int* getAgeAddress() {
+//         return &age;
+//     }
+// };
+
+// int main() {
+//     Student s1;
+
+//     cout << *s1.getAgeAddress(); // 20
+// }
+
+
+
 #include <iostream>
 using namespace std;
 
@@ -138,25 +227,31 @@ public:
         value = v;
     }
 
-    friend Number operator+(Number n);
+    // Prefix increment
+    Number& operator++() {
+        ++value;
+        return *this;
+    }
+
+    // Postfix increment
+    Number operator++(int) {
+        Number old(*this);
+        value++;
+        return old;
+    }
 
     void display() {
-        cout << "Value: " << value << endl;
+        cout << value << endl;
     }
 };
 
-Number operator+(Number n) {
-
-    return Number(+n.value);
-}
-
 int main() {
+    Number a(10);
 
-    Number a(25);
+    ++a;
+    a.display();  // 11
 
-    Number result = +a;
-
-    result.display();
-
-    return 0;
+    a++;
+    a.display();  // 12
 }
+
